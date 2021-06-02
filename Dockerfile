@@ -1,3 +1,3 @@
-FROM tomcat :8.5
+FROM tomcat :latest
 COPY target\\*.war C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps\\
 # Added to test webhook
