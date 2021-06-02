@@ -1,3 +1,7 @@
-FROM tomcat :latest
-COPY target\\*.war C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps\\
+FROM tomcat:8.5-alpine
+LABEL maintainer="surajkumar2699@gmail.com"
+ADD sample.war /usr/local/tomcat/webapps/
+
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
 # Added to test webhook
